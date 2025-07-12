@@ -1,0 +1,17 @@
+#Blocklist configuration file
+# A list of domains to block permanently whenever the tracker is active.
+static_blocklist:
+  - twitter.com
+  - facebook.com
+  - reddit.com
+
+# Rules that trigger a block based on usage patterns.
+dynamic_rule:
+  enabled: true
+  # Block a domain if it is visited more than this many times...
+  visit_count: 5
+  # ...within this many minutes.
+  time_period_minutes: 60
+
+# How often (in seconds) the system checks the logs to update the blocklist.
+evaluation_interval_seconds: 60
