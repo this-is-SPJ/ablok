@@ -1,5 +1,5 @@
 #Blocklist configuration file
-# A list of domains to block permanently whenever the tracker is active.
+# permanent blocklist configuration for ablok
 static_blocklist:
   - twitter.com
   - facebook.com
@@ -9,9 +9,9 @@ static_blocklist:
 dynamic_rule:
   enabled: true
   # Block a domain if it is visited more than this many times...
-  visit_count: 5
+  visit_count: 100 #deafult is 100 in prg
   # ...within this many minutes.
-  time_period_minutes: 60
+  time_period_minutes: 60  # default is 60
 
 # How often (in seconds) the system checks the logs to update the blocklist.
-evaluation_interval_seconds: 60
+evaluation_interval_seconds: 30
